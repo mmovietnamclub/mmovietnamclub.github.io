@@ -1,52 +1,59 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>MMOVN</title>
+		<title>Cộng đồng MMO Việt Nam</title>
 	</head>
 	<script>
-	/*function searchToObject() {
-	  var pairs = window.location.search.substring(1).split("&"),
-		obj = {},
-		pair,
-		i;
+		function searchToObject() {
+		  var pairs = window.location.search.substring(1).split("&"),
+			obj = {},
+			pair,
+			i;
 
-	  for ( i in pairs ) {
-		if ( pairs[i] === "" ) continue;
+		  for ( i in pairs ) {
+			if ( pairs[i] === "" ) continue;
 
-		pair = pairs[i].split("=");
-		obj[ decodeURIComponent( pair[0] ) ] = decodeURIComponent( pair[1] );
-	  }
+			pair = pairs[i].split("=");
+			obj[ decodeURIComponent( pair[0] ) ] = decodeURIComponent( pair[1] );
+		  }
 
-	  return obj;
-	}
-		let uri = searchToObject();
-		let getvip = true;
-		
-		
-		var data = {
-			id: [
-				"0",
-				"https://vnkeep.page.link/ZmnuRdKLJ7F9jtQSA"
-			]
+		  return obj;
 		}
-		
-		if(uri["getvip"] == undefined || uri["getvip"] == true || uri["getvip"] == 1){
-			if(uri["id"] != undefined){
-				let fakeId = parseInt(uri["id"])
-				data.id.forEach((value,fid)=>{
-					console.log(value,fid)
-					if(fid == fakeId){
-						window.location = value
-					}
-				})
-			}else{
-				console.log("error")
+		function getLinkVip(){
+			let uri = searchToObject();
+			let getvip = true;
+			
+			
+			var data = {
+				id: [
+					"0",
+					"https://vnkeep.page.link/ZmnuRdKLJ7F9jtQSA"
+				]
 			}
-		}*/
+			
+			if(uri["getvip"] == undefined || uri["getvip"] == true || uri["getvip"] == 1){
+				if(uri["id"] != undefined){
+					let fakeId = parseInt(uri["id"])
+					data.id.forEach((value,fid)=>{
+						console.log(value,fid)
+						if(fid == fakeId){
+							window.location = value
+						}
+					})
+				}else{
+					console.log("error")
+				}
+			}
+			console.log("VIP")
+		}
 	</script>
 	<body>
 		Welcome to MMO VietNam,<br/>
-		Mời bạn bấm vào link sau đây nhé
-		hoặc hãy bám vào đây và inbox cho mình nhé <a href="https://www.facebook.com/truyentdm">here</a>
+		<div id="content">
+		Bạn không phải là người máy chứ ? 
+		Bạn vui lòng bấm vào đây "<input type="checkbox" onClick="getLinkVip()" id="getLinkVip"/> <label for="getLinkVip">Kiểm tra</label>" <br/>
+		Tham gia nhóm: <a href="https://www.facebook.com/groups/264590521005860/">Cộng đồng công nghệ 4.0</a>
+		hoặc hãy bám vào đây và inbox trò chuyện với cho mình nhé <a href="https://www.facebook.com/truyentdm">here</a>
+		</div>
 	</body>
 </html>
